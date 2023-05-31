@@ -5,8 +5,11 @@ Feel free to contribute to the repo if you can . Thanks and give a star⭐.
 
 
 # Passport-Local
-Register route is API_URL/register ( This route will also check whether the user is already registered . If already registered it will show the msg.)
+Register route is API_URL/register ( This route will also check whether the user is already registered .
+If already registered it will show the msg.)
+
 Login route is API_URL/login ( This will also check whether the user has entered a wrong email and password and give message accordingly ) 
+
 Logout route API_URL/logout ( removes user session from the browser and logs out user ) 
 
 
