@@ -6,6 +6,8 @@ Feel free to contribute to the repo if you can .
 
 Thanks and please give a star⭐ if you found it helpful.
 
+# How to run locally ? 
+cd into the directory and run "nodemon" or "node index.js" . It will do the magic.😅
 
 # Passport-Local
 Register route is API_URL/register ( This route will also check whether the user is already registered .
