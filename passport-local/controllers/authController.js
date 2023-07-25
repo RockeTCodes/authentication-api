@@ -5,6 +5,7 @@ const passport = require("passport");
 const session = require("express-session");
 const LocalStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcrypt");
+const cors = require("cors");
 
 //requiring the models
 const User = require("../db/models.js");
@@ -30,10 +31,17 @@ app.use(
     secret: "rocketcodesisawesome",
     resave: true,
     saveUninitialized: true,
+    cookie: { maxAge: 24 * 60 * 60 * 1000 },// to be able to save cookie to browser 
   })
 );
 app.use(passport.initialize());
 app.use(passport.session());
+const corsOptions = {
+  origin: ["http://localhost:4002", "http://localhost:4003"], //The routes that will access this api.
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 //passport strategy
 passport.use(
